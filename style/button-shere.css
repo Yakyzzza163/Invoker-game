@@ -1,0 +1,35 @@
+.button-sphere
+{
+	position: relative;
+	display: flex;
+	aspect-ratio: 1/1;
+	padding: 0;
+	margin: 0;
+	border: 0px;
+	outline: none;
+
+	width: 120px;
+
+	transition: filter 1s;
+}
+
+.button-sphere:hover {
+	filter: brightness(1.2);
+ }
+
+.button-sphere img 
+{
+	width: 100%;
+}
+
+.button-sphere span 
+{
+	position: absolute;
+	right: 15px;
+	top: 10px;
+	color: white;
+
+	font-size: 2em;
+}
+
+
