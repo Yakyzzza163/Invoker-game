@@ -1,24 +1,28 @@
 
-const buttons = [...document.querySelectorAll(".button-sphere")];
+const Buttons = {
+	spheres: [...document.querySelectorAll(".button-sphere")],
+	skills: [...document.querySelectorAll(".button-skill")]
+  }
 
-buttons.at(0).onclick = function(){
+Buttons.spheres.at(0).onclick = function(clickEvent){
+console.log (clickEvent.type)
 	
 }
 
-buttons.at(1).onclick = function(){
+Buttons.spheres.at(1).onclick = function(clickEvent){
 
 }
 
-buttons.at(2).onclick = function(){
+Buttons.spheres.at(2).onclick = function(clickEvent){
 
 }
 
 document.addEventListener("keydown", ({key}) => {
 	
 	const table = {
-		"q": buttons.at(0),
-		"w": buttons.at(0),
-		"e": buttons.at(0)
+		"q": Buttons.spheres.at(0),
+		"w": Buttons.spheres.at(1),
+		"e": Buttons.spheres.at(2)
 	};
 
 	if (key in table === false){
@@ -27,3 +31,5 @@ document.addEventListener("keydown", ({key}) => {
 
 	table[key].click();
 })
+
+console.log (Buttons.skills)

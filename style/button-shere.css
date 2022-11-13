@@ -1,4 +1,4 @@
-.button-sphere
+.skills button
 {
 	position: relative;
 	display: flex;
@@ -13,16 +13,16 @@
 	transition: filter 1s;
 }
 
-.button-sphere:hover {
+.skills button:hover {
 	filter: brightness(1.2);
  }
 
-.button-sphere img 
+.skills button img 
 {
 	width: 100%;
 }
 
-.button-sphere span 
+.skills button span 
 {
 	position: absolute;
 	right: 15px;
@@ -31,5 +31,6 @@
 
 	font-size: 2em;
 }
+
 
 

@@ -3,6 +3,7 @@
 body {
 	background: #808080;
 	font-family: Roboto;
+  display: flex;
 }
 .button {
 	position: relative;
@@ -89,3 +90,6 @@ body {
   transform: scale(1, 1);
 }
 
+.skill { 
+  color:#9b59b6
+}
