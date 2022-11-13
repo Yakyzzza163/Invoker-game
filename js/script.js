@@ -18,7 +18,6 @@ Buttons.skills.at(1).onclick = function(clickEvent){
 
 Buttons.special.invoke.onclick = function(clickEvent){
 	const spheresString = Invoker.casted.join("");
-	Invoker.casted.length = 0;
 	Invoker.invoke(spheresString);
 }
 
@@ -51,9 +50,10 @@ const Invoker = {
 	},
 	castSphere: (content) => {
 	   Invoker.casted.push(content);
-	   if (Invoker.casted.length === 3){
+	   while (Invoker.casted.length > 3){
 			Invoker.casted.shift();
 	   }
+		console.log(Invoker.casted);
 	},
 	createSpell: () => {
 
