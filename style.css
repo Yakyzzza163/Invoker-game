@@ -23,9 +23,7 @@ body {
   z-index: 2;
 }
 
-.button:active {
-  border-color: rgba(0, 0, 0, 0.1);
-}
+
 
 .button::before,
 .button::after {
