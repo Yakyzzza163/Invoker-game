@@ -3,18 +3,7 @@ const Buttons = {
 	spheres: [...document.querySelectorAll(".button-sphere")],
 	skills: [...document.querySelectorAll(".button-skill")]
   }
-Buttons.spheres.at(0).onclick = function(clickEvent){
-console.log (clickEvent.type)
-	
-}
 
-Buttons.spheres.at(1).onclick = function(clickEvent){
-
-}
-
-Buttons.spheres.at(2).onclick = function(clickEvent){
-
-}
 
 Buttons.skills.at(0).onclick = function(clickEvent){
 
@@ -41,26 +30,26 @@ document.addEventListener("keydown", ({key}) => {
 	table[key].click();
 })
 
-console.log (Buttons.skills)
-
 const Invoker = {
 	casted: [],
-	castThreeSphere: (Content) => {
+	castThreeSphere: (spheresString) => {
 		Invoker.casted.length = 0;
-		const skillsTable = {"qqq": "cold snap"}
+		const skillsTable = {"QQQ": "cold snap"};
 		
-
+		alert(skillsTable[spheresString]);
 
 	},
 	castSphere: (content) => {
 	   Invoker.casted.push(content);
 	   if (Invoker.casted.length === 3){
-		Invoker.castThreeSphere()
+			const castedString = Invoker.casted.join("");
+			Invoker.castThreeSphere(castedString);
 	   }
 	}
   }
   
   Buttons.spheres.forEach(node => {
-  const content = node.textContent;
-  node.onclick = Invoker.castSphere.bind(null, content);
+  	const content = node.textContent;
+  	node.onclick = Invoker.castSphere.bind(null, content);
   }); 
+
