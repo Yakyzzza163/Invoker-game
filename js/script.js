@@ -33,6 +33,7 @@ document.addEventListener("keydown", ({key}) => {
 const Invoker = {
 	casted: [],
 	castThreeSphere: (spheresString) => {
+		console.log (spheresString)
 		Invoker.casted.length = 0;
 		const skillsTable = {"QQQ": "cold snap"};
 		
@@ -49,7 +50,7 @@ const Invoker = {
   }
   
   Buttons.spheres.forEach(node => {
-  	const content = node.textContent;
+  	const content = node.querySelector("span") .textContent;
   	node.onclick = Invoker.castSphere.bind(null, content);
   }); 
 
