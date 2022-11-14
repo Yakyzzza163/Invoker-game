@@ -43,16 +43,20 @@ const Invoker = {
 	casted: [],
 	invoke: (spheresString) => {
 		Invoker.casted.length = 0;
-		const skillsTable = {"QQQ+R": "Cold Snap"};
-		const skillsTable = {"QQW+R": "Ghost Walk"};
-		const skillsTable = {"QQE+R": "Ice Walk"};
-		const skillsTable = {"WWW+R": "E.M.P"};
-		const skillsTable = {"WWQ+R": "Tornado"};
-		const skillsTable = {"WWE+R": "Alacrity"};
-		const skillsTable = {"EEE+R": "Sun Strike"};
-		const skillsTable = {"EEQ+R": "Forge Spirit"};
-		const skillsTable = {"EEW+R": "Chaos Meteor"};
-		const skillsTable = {"QWE+R": "Deafeninig Blast"};
+		const skillsTable = {
+		"QQQ": "Cold Snap",
+		"QQW": "Ghost Walk",
+		"QQE": "Ice Walk",
+		"WWW": "E.M.P",
+		"WWQ": "Tornado",
+		"WWE": "Alacrity",
+		"EEE": "Sun Strike",
+		"EEQ": "Forge Spirit",
+		"EEW": "Chaos Meteor",
+		"QWE": "Deafeninig Blast"
+		}
+
+		
 		
 
 		alert(skillsTable[spheresString]);
